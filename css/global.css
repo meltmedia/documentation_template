@@ -1,0 +1,302 @@
+/*-----------------------------------
+INSTALLATION GUIDE CONTENT PAGES
+
+Author: meltmedia
+Date: 2013
+------------------------------------*/
+
+/*-----------------------------------
+Reset
+------------------------------------*/
+
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*-----------------------------------
+Global Styles
+------------------------------------*/
+
+html {-webkit-text-size-adjust: none; }
+
+/* resets the box model */
+* { box-sizing: border-box; }
+
+body:before {
+  background: #97c0e6;
+  box-shadow: 0 7px 10px 5px #fff;
+  content: '';
+  height: 10px;
+  position: fixed;
+  top: 0;
+  -o-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  width: 100%;
+  z-index: 2;
+}
+
+body {
+  color: #444;
+  font-family: Helvetica, Arial, sans-serif;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+h1, h2, h3, pre { margin-bottom: 20px; }
+
+h1 { font-size: 28px; }
+h2 { font-size: 20px; }
+h3 { font-size: 18px; }
+
+pre { word-wrap: break-word; }
+
+p, ul, ol, dl {
+  color: #666;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0 0 20px;
+}
+
+dl dt { font-weight: bold; }
+dl dd { margin-bottom: 10px; }
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+a { text-decoration: none; }
+
+/* data tables */
+
+table {
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+thead { background: #e7e7e7; }
+tbody { color: #666; }
+
+tr { border-bottom: 1px solid #ccc; }
+
+th, td {
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+
+th:last-child, td:last-child { border: none; }
+
+/*-----------------------------------
+Content and Nav Container
+------------------------------------*/
+
+.container {
+  margin: 0 auto;
+  max-width: 920px;
+  position: relative;
+  z-index: 1;
+}
+
+/*-----------------------------------
+Navigation
+------------------------------------*/
+
+.pageNav {
+  float: left;
+  font-size: 15px;
+  padding: 50px 20px 20px;
+  width: 30%;
+}
+
+.pageNav-list {
+  border-left: 2px solid #458bcb;
+  line-height: 18px;
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  width: 20%;
+  max-width: 250px;
+  min-width: 100px;
+}
+
+.projectName {
+  color: #444;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.projectName span {
+  color: #666;
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.pageNav a {
+  color: #555;
+  display: block;
+  padding: 10px;
+}
+
+.pageNav a:hover { border-left: 6px solid #97c0e6; }
+
+/*-----------------------------------
+Main Content
+------------------------------------*/
+
+.siteContent {
+  float: right;
+  padding: 0 20px;
+  position: relative;
+  width: 70%;
+}
+
+.sectionTitle {
+  padding-top: 60px;
+}
+
+.siteContent h2 { margin-top: 30px; }
+
+.siteContent ul, .siteContent ol { margin-left: 40px; }
+.siteContent ul { list-style-type: disc;}
+.siteContent ol { list-style-type: decimal; }
+
+.siteContent a {
+  border-bottom: 1px dotted #458bcb;
+  color: #458bcb;
+}
+
+.siteContent img {
+  border: 1px solid #ccc;
+  display: block;
+  margin: 25px 0;
+  width: 100%;
+}
+
+.snippet-commandLine {
+  background: #444;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Courier New", Courier, Times, serif;
+  line-height: 21px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/*-----------------------------------
+Clearfix
+------------------------------------*/
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/*-----------------------------------
+Media Queries
+------------------------------------*/
+
+/*********************************/
+/* --- Max Screen 550px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 550px) {
+
+  .pageNav, .siteContent {
+    float: none;
+    width: 100%;
+  }
+
+  .pageNav { padding: 0; }
+
+  .pageNav-list {
+    border-left: none;
+    position: static;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .pageNav a { border-bottom: 1px dotted #ccc; }
+
+  .pageNav a:hover {
+    border-left: none;
+    background: #e7e7e7;
+  }
+
+  .container { padding-top: 20px; }
+
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 16px; }
+
+  p, ul, ol, dl, .snippet-commandLine {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .sectionTitle { padding-top: 30px; }
+
+} /* end 550px wide */
